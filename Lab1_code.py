@@ -11,8 +11,8 @@ def count_pair_10():
     l = [2,7,4,1,3,6]
     length = len(l)
     count = 0
-    for i in range (0,length):
-        for j in range (0,length):
+    for i in range (length):
+        for j in range (length):
             if l[i]+l[j]==10:
                 count=count+1
             j=j+1 
@@ -21,10 +21,10 @@ def count_pair_10():
       
 #Q2
 
-def range(l):
+def range_list(l):
     length1 = len(l)
     if length1<3:
-        print("Error: Range determination not possible")
+        print("\n Error: Range determination not possible")
     else:
         min=l[0]
         i=0
@@ -41,7 +41,7 @@ def range(l):
             i=i+1
             
         range_of_list=max-min
-        print(range_of_list)
+        print("Range:",range_of_list)
         
 #Q3
 def matrix_exponent(matrix,num):
@@ -52,7 +52,7 @@ def matrix_exponent(matrix,num):
         while exp_count<=num:
             result = np.dot(result,matrix)
             exp_count=exp_count+1
-        print(result)
+        print("Result matrix:\n", result)
         
         
 #Q4
@@ -67,21 +67,19 @@ def most_occuring_char(s):
             count_max=count_check
             letter = s[i]
         i=i+1
-    print("Most occuring character:",letter, "\nOccurence count:", count_max)
+    print("\nMost occuring character:",letter, "\nOccurence count:", count_max)
        
        
 
 
 #main
 def main():
-    '''
+
     count_pair_10()
     list = [5,3,8,1,0,4]
-    range(list)
-    
+    range_list(list)
     m=np.array([[1,2,3],[3,6,4],[7,2,5]])
     matrix_exponent(m,3)
-    '''
     string="hippopotamus"
     most_occuring_char(string)
 
